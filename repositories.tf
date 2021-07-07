@@ -13,6 +13,18 @@ resource "github_repository" "aws_nuke" {
   vulnerability_alerts   = true
 }
 
+resource "github_actions_secret" "aws_access_key_id" {
+  repository       = github_repository.aws_nuke.name
+  secret_name      = "AWS_ACCESS_KEY_ID"
+  plaintext_value  = var.aws_access_key_id
+}
+
+resource "github_actions_secret" "aws_secret_access_key" {
+  repository       = github_repository.aws_nuke.name
+  secret_name      = "AWS_SECRET_ACCESS_KEY"
+  plaintext_value  = var.aws_secret_access_key
+}
+
 resource "github_repository" "terraform_aws" {
   name = "terraform-aws"
 
