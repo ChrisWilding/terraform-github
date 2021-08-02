@@ -2,6 +2,7 @@ resource "github_repository" "monkey" {
   name = "monkey"
 
   allow_merge_commit     = false
+  archive_on_destroy     = true
   auto_init              = true
   delete_branch_on_merge = true
   gitignore_template     = "Go"
