@@ -1,8 +1,6 @@
 resource "github_repository" "terraform_github" {
   name = "terraform-github"
 
-  visibility = "private"
-
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true
