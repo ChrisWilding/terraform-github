@@ -16,7 +16,7 @@ remote_state {
 }
 
 locals {
-  secrets = jsondecode(sops_decrypt_file("secrets.tfvars.json"))
+  secrets = jsondecode(sops_decrypt_file("./secrets/secrets.tfvars.json"))
 }
 
 inputs = merge(
