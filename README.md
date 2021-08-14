@@ -2,31 +2,24 @@
 
 ## Prerequisites
 
-1. [age](https://github.com/FiloSottile/age)
-1. [sops](https://github.com/mozilla/sops)
-1. [terraform](https://www.terraform.io)
+1. [terragrunt](https://terragrunt.gruntwork.io/docs/getting-started/install/)
+
+## Setup
+
+```sh
+$ git clone git@github.com:ChrisWilding/terraform-github.git
+$ git submodule update --init
+```
 
 ## How To
 
-### Decrypt secrets
+### Manage Secrets
+
+See [terraform-github-secrets](https://github.com/ChrisWilding/terraform-github-secrets)
+
+### Apply
 
 ```sh
-$ sops --output-type json -d secrets.tfvars.json.enc > secrets.tfvars.json
-```
-
-### Encrypt secrests
-
-```sh
-$ sops -e secrets.tfvars.json > secrets.tfvars.json.enc
-$ rm secrets.tfvars.json
-```
-
-### Apply Terraform
-
-```sh
-$ sops --output-type json -d secrets.tfvars.json.enc > secrets.tfvars.json
-$ terraform init
-$ terraform plan -out="tfplan" --var-file="secrets.tfvars.json"
-$ terraform apply "tfplan"
-$ rm secrets.tfvars.json
+$ terragrunt init
+$ terragrunt apply
 ```
