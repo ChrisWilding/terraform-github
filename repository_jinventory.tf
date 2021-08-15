@@ -12,3 +12,16 @@ resource "github_repository" "jinventory" {
   license_template       = "apache-2.0"
   vulnerability_alerts   = true
 }
+
+resource "github_branch_protection" "jinventory" {
+  repository_id  = github_repository.jinventory.name
+  pattern        = "main"
+  enforce_admins = true
+
+  required_status_checks {
+    contexts = [
+      "build"
+    ]
+    strict = true
+  }
+}
