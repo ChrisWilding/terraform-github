@@ -6,11 +6,11 @@ resource "github_repository" "exercism_go" {
   auto_init              = true
   delete_branch_on_merge = true
   description            = "Solutions to Exercism exercises in Go"
-  homepage_url           = "https://exercism.io/tracks/go"
   gitignore_template     = "Go"
   has_issues             = false
   has_projects           = false
   has_wiki               = false
+  homepage_url           = "https://exercism.io/tracks/go"
   license_template       = "MIT"
   vulnerability_alerts   = true
 }
