@@ -25,3 +25,9 @@ resource "github_branch_protection" "jinventory" {
     strict = true
   }
 }
+
+resource "github_actions_secret" "heroku_api_key" {
+  repository      = github_repository.jinventory.name
+  secret_name     = "HEROKU_API_KEY"
+  plaintext_value = var.heroku_api_key
+}

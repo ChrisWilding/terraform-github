@@ -5,3 +5,7 @@ variable "aws_access_key_id" {
 variable "aws_secret_access_key" {
   type = string
 }
+
+variable "heroku_api_key" {
+  type = string
+}
