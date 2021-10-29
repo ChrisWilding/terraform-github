@@ -10,7 +10,7 @@ resource "github_repository" "exercism_x86_64_assembly" {
   has_issues             = false
   has_projects           = false
   has_wiki               = false
-  homepage_url           = "https://exercism.io/tracks/x86-64-assembly"
+  homepage_url           = "https://exercism.org/tracks/x86-64-assembly"
   license_template       = "MIT"
   vulnerability_alerts   = true
 }

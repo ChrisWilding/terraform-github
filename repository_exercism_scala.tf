@@ -10,7 +10,7 @@ resource "github_repository" "exercism_scala" {
   has_issues             = false
   has_projects           = false
   has_wiki               = false
-  homepage_url           = "https://exercism.io/tracks/scala"
+  homepage_url           = "https://exercism.org/tracks/scala"
   license_template       = "MIT"
   vulnerability_alerts   = true
 }

@@ -10,7 +10,7 @@ resource "github_repository" "exercism_go" {
   has_issues             = false
   has_projects           = false
   has_wiki               = false
-  homepage_url           = "https://exercism.io/tracks/go"
+  homepage_url           = "https://exercism.org/tracks/go"
   license_template       = "MIT"
   vulnerability_alerts   = true
 }

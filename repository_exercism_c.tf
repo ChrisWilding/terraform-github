@@ -10,7 +10,7 @@ resource "github_repository" "exercism_c" {
   has_issues             = false
   has_projects           = false
   has_wiki               = false
-  homepage_url           = "https://exercism.io/tracks/c"
+  homepage_url           = "https://exercism.org/tracks/c"
   license_template       = "MIT"
   vulnerability_alerts   = true
 }
