@@ -3,7 +3,7 @@ resource "github_repository" "advent_of_code_2021" {
 
   allow_merge_commit     = false
   archive_on_destroy     = true
-  archived               = true
+  archived               = false
   auto_init              = true
   delete_branch_on_merge = true
   description            = "Solutions to Advent of Code 2021"
