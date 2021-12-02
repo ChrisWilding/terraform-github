@@ -1,6 +1,7 @@
 resource "github_repository" "nasa" {
   name = "nasa"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   archived               = true

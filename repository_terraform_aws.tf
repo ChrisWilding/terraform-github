@@ -1,6 +1,7 @@
 resource "github_repository" "terraform_aws" {
   name = "terraform-aws"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true

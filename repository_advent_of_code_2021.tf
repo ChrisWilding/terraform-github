@@ -1,6 +1,7 @@
 resource "github_repository" "advent_of_code_2021" {
   name = "advent-of-code-2021"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   archived               = false

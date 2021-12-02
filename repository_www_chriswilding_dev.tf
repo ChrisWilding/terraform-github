@@ -1,6 +1,7 @@
 resource "github_repository" "www_chriswilding_dev" {
   name = "www.chriswilding.dev"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true

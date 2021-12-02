@@ -1,6 +1,7 @@
 resource "github_repository" "merchants_guide_to_the_galaxy" {
   name = "merchants-guide-to-the-galaxy"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   archived               = true

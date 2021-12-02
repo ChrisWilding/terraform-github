@@ -1,6 +1,7 @@
 resource "github_repository" "mazes_for_programmers" {
   name = "mazes-for-programmers"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true

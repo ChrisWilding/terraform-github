@@ -1,6 +1,7 @@
 resource "github_repository" "exercism_x86_64_assembly" {
   name = "exercism-x86-64-assembly"
 
+  allow_auto_merge       = true
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true
