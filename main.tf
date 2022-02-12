@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "ChrisWilding"
+    workspaces {
+      name = "terraform-github"
+    }
+  }
+
   required_providers {
     github = {
       source  = "integrations/github"

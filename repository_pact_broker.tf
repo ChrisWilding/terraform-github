@@ -3,7 +3,7 @@ resource "github_repository" "pact_broker" {
 
   visibility = "private"
 
-  allow_auto_merge       = true
+  allow_auto_merge       = false
   allow_merge_commit     = false
   archive_on_destroy     = true
   auto_init              = true
