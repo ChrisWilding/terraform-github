@@ -19,3 +19,16 @@ resource "github_actions_secret" "terraform_cloud_api_key" {
   secret_name     = "TERRAFORM_CLOUD_API_KEY"
   plaintext_value = var.terraform_cloud_api_key
 }
+
+resource "github_branch_protection" "terraform_github" {
+  repository_id  = github_repository.terraform_github.name
+  pattern        = "main"
+  enforce_admins = true
+
+  required_status_checks {
+    contexts = [
+      "Terraform",
+    ]
+    strict = true
+  }
+}
