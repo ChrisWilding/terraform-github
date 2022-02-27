@@ -14,7 +14,7 @@ resource "github_repository" "go_base" {
   vulnerability_alerts   = true
 }
 
-resource "github_branch_protection" "go_base_ci" {
+resource "github_branch_protection" "go_base" {
   repository_id  = github_repository.go_base.name
   pattern        = "main"
   enforce_admins = true
@@ -22,18 +22,6 @@ resource "github_branch_protection" "go_base_ci" {
   required_status_checks {
     contexts = [
       "CI",
-    ]
-    strict = true
-  }
-}
-
-resource "github_branch_protection" "go_base_lint" {
-  repository_id  = github_repository.go_base.name
-  pattern        = "main"
-  enforce_admins = true
-
-  required_status_checks {
-    contexts = [
       "Lint",
     ]
     strict = true
