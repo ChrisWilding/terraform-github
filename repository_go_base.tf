@@ -13,3 +13,29 @@ resource "github_repository" "go_base" {
   license_template       = "apache-2.0"
   vulnerability_alerts   = true
 }
+
+resource "github_branch_protection" "go_base_ci" {
+  repository_id  = github_repository.go_base.name
+  pattern        = "main"
+  enforce_admins = true
+
+  required_status_checks {
+    contexts = [
+      "CI",
+    ]
+    strict = true
+  }
+}
+
+resource "github_branch_protection" "go_base_lint" {
+  repository_id  = github_repository.go_base.name
+  pattern        = "main"
+  enforce_admins = true
+
+  required_status_checks {
+    contexts = [
+      "Lint",
+    ]
+    strict = true
+  }
+}
