@@ -21,8 +21,8 @@ resource "github_branch_protection" "go_base" {
 
   required_status_checks {
     contexts = [
-      "CI",
-      "Lint",
+      "ci",
+      "lint",
     ]
     strict = true
   }
