@@ -9,11 +9,11 @@ terraform {
   required_providers {
     github = {
       source  = "integrations/github"
-      version = "~> 4.18.2"
+      version = "5.7.0"
     }
   }
 }
 
 provider "github" {
-  owner = "ChrisWilding"
+  owner = "chriswilding"
 }
