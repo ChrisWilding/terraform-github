@@ -1,5 +1,5 @@
-resource "github_repository" "dlog" {
-  name = "dlog"
+resource "github_repository" "proglog" {
+  name = "proglog"
 
   allow_auto_merge       = true
   allow_merge_commit     = false
