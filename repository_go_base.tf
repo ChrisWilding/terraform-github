@@ -33,9 +33,3 @@ resource "github_actions_secret" "go_base_terraform_cloud_api_key" {
   secret_name     = "TERRAFORM_CLOUD_API_KEY"
   plaintext_value = var.terraform_cloud_api_key
 }
-
-resource "github_actions_secret" "go_base_heroku_api_key" {
-  repository      = github_repository.go_base.name
-  secret_name     = "HEROKU_API_KEY"
-  plaintext_value = var.heroku_api_key
-}
