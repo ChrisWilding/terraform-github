@@ -13,5 +13,5 @@ resource "github_repository" "merchants_guide_to_the_galaxy" {
   has_projects           = false
   has_wiki               = false
   license_template       = "apache-2.0"
-  vulnerability_alerts   = true
+  vulnerability_alerts   = false
 }

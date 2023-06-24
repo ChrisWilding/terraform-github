@@ -14,5 +14,5 @@ resource "github_repository" "nasa" {
   has_wiki               = false
   homepage_url           = "https://cw-nasa.herokuapp.com/search"
   license_template       = "apache-2.0"
-  vulnerability_alerts   = true
+  vulnerability_alerts   = false
 }

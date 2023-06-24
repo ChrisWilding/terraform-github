@@ -11,5 +11,5 @@ resource "github_repository" "canvas" {
   has_projects           = false
   has_wiki               = false
   license_template       = "apache-2.0"
-  vulnerability_alerts   = true
+  vulnerability_alerts   = false
 }
