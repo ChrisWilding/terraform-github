@@ -1,5 +1,5 @@
-resource "github_repository" "tiger_go" {
-  name = "tiger-go"
+resource "github_repository" "tiger" {
+  name = "tiger"
 
   allow_auto_merge       = true
   allow_merge_commit     = false
