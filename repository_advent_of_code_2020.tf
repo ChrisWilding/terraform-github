@@ -14,5 +14,5 @@ resource "github_repository" "advent_of_code_2020" {
   has_wiki               = false
   homepage_url           = "https://adventofcode.com/2020"
   license_template       = "apache-2.0"
-  vulnerability_alerts   = true
+  vulnerability_alerts   = false
 }
