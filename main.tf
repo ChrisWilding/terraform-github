@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "ChrisWilding"
+    organization = "chriswilding"
     workspaces {
       name = "terraform-github"
     }
